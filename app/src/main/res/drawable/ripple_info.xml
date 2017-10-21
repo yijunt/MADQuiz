@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--References:
+1. https://stackoverflow.com/questions/40008609/add-ripple-effect-to-my-button-with-button-background-color
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android" android:color="#ff9000">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="#ffe400" />
+        </shape>
+    </item>
+</selector>

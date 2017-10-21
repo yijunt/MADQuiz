@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">MADQuiz</string>
+
+    <string name="quiz_welcome">Welcome to the Quiz Activity</string>
+
+    <string name="quiz_skip">Skip</string>
+    <string name="quiz_submit">Submit</string>
+    <string name="quiz_next">Next</string>
+
+    <string name="quiz_restart">Restart</string>
+    <string name="quiz_end">End</string>
+
+    <string name="quiz_remaining_question">%d Questions Remaining</string>
+    <string name="quiz_last_remaining">1 Question Remaining</string>
+    <string name="quiz_last_question">Last Question</string>
+    <string name="quiz_skip_warning">You may not skip the last question</string>
+
+    <string name="about_content">MAD Quiz is a mobile quiz application that contains different topics about Android Studio to aid INFS3634 future students.
+        \nStudents can perform quizzes and review topics with Android Studio references.</string>
+</resources>

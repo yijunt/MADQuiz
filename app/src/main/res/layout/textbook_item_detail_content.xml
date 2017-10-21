@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/detailLayoutMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00edeae6"
+    android:orientation="vertical"
+    android:padding="15dp"
+    tools:context="edu.unsw.infs.assignment.textbook.TextBookDetailFragment">
+
+    <LinearLayout
+        android:id="@+id/detailLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment">
+
+        <TextView
+            android:id="@+id/text_detail1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_textbook_list"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="13pt"
+            tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment" />
+
+        <TextView
+            android:id="@+id/item_detailDesc1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="7pt"
+            tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment">
+
+
+        <TextView
+            android:id="@+id/text_detail2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_textbook_list"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="13pt"
+            tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment" />
+
+        <TextView
+            android:id="@+id/item_detailDesc2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="7pt"
+            tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/detailLayout3"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="#ffffff"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment">
+
+        <TextView
+            android:id="@+id/text_detail3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ripple_textbook_list"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textSize="13pt"
+            tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment" />
+
+        <TextView
+            android:id="@+id/item_detailDesc3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:textColor="@android:color/black"
+            android:textIsSelectable="true"
+            android:textSize="7pt"
+            tools:context="infs3634.assignmentagain.TextBook.TextBookDetailFragment" />
+    </LinearLayout>
+
+</LinearLayout>
