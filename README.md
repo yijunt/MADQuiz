@@ -1,3 +1,3 @@
 # MADQuiz
 INFS3634 Assignment
-!["MADQuiz"](image url"MADQuiz MainScreen.PNG")
+!["MADQuiz"](https://github.com/yijunt/MADQuiz/blob/master/MADQuiz%20MainScreen.PNG"MADQuiz")
