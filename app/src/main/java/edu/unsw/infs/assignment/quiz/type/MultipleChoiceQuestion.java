@@ -24,6 +24,9 @@ import edu.unsw.infs.assignment.quiz.QuestionBuilder;
  * Created by Nodin on 12-Oct-17.
  */
 
+/**
+ * Represents a {@link Question} of response type MCQ
+ */
 public class MultipleChoiceQuestion implements Question {
 
     public static final Creator<MultipleChoiceQuestion> CREATOR = new Creator<MultipleChoiceQuestion>() {

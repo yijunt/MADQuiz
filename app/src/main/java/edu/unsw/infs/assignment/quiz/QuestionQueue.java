@@ -14,6 +14,9 @@ import java.util.Queue;
  * Created by Nodin on 12-Oct-17.
  */
 
+/**
+ * A {@link Queue} of {@link Question}s intended for single use
+ */
 public class QuestionQueue implements Queue<Question> {
 
     private final String topic;
@@ -63,6 +66,11 @@ public class QuestionQueue implements Queue<Question> {
         return questions.containsAll(collection);
     }
 
+    /**
+     * Gets the current {@link Question}
+     *
+     * @return The current {@link Question}
+     */
     public Question current() {
         return current;
     }
@@ -75,14 +83,20 @@ public class QuestionQueue implements Queue<Question> {
         return peek();
     }
 
-    public int getInitialSize() {
-        return initial_size;
-    }
-
+    /**
+     * Gets the topic of the {@link Question}s
+     *
+     * @return The topic
+     */
     public String getTopic() {
         return topic;
     }
 
+    /**
+     * Gets the total weighting of all {@link Question}s
+     *
+     * @return The total weighting
+     */
     public int getTotalweight() {
         return total_weight;
     }
@@ -148,6 +162,13 @@ public class QuestionQueue implements Queue<Question> {
         return questions.retainAll(collection);
     }
 
+    /**
+     * Sets the current {@link Question}
+     *
+     * @param question The {@link Question} to set as current
+     *
+     * @return The current {@link Question}
+     */
     public Question setCurrent(Question question) {
         return this.current = question;
     }

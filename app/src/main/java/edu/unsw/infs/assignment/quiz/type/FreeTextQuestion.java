@@ -27,6 +27,10 @@ import edu.unsw.infs.assignment.quiz.QuestionBuilder;
 /**
  * Created by Nodin on 12-Oct-17.
  */
+
+/**
+ * Represents a {@link Question} of response type FREE_TEXT
+ */
 public class FreeTextQuestion implements Question {
 
     public static final Creator<FreeTextQuestion> CREATOR = new Creator<FreeTextQuestion>() {

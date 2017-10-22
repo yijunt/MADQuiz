@@ -28,6 +28,9 @@ import jxl.Workbook;
 
 import edu.unsw.infs.assignment.R;
 
+/**
+ * Activity Class for Quiz
+ */
 public class QuizActivity extends AppCompatActivity {
 
     public static final String TAG = "QuizActivity";
@@ -53,10 +56,22 @@ public class QuizActivity extends AppCompatActivity {
     private QuestionQueue queue;
     private AtomicInteger score_value;
 
+    /**
+     * Gets a {@link View} of type {@link T} from the ID
+     *
+     * @param type The Class object of the {@link View}
+     * @param id The ID of the {@link View}
+     * @param <T> The Class type of the {@link View}
+     *
+     * @return The {@link View} of type {@link T}
+     */
     protected <T extends View> T getView(Class<T> type, int id) {
         return type.cast(findViewById(id));
     }
 
+    /**
+     * Loads {@link Question}s from the .XLS File
+     */
     public void loadQuestions() {
         this.questions = new HashMap<>();
 
@@ -213,7 +228,10 @@ public class QuizActivity extends AppCompatActivity {
         this.questions = null;
     }
 
-    public void onQuizComplete() {
+    /**
+     * Called on quiz completion
+     */
+    private void onQuizComplete() {
         score.setVisibility(View.INVISIBLE);
         score.setText      (null);
 
@@ -234,7 +252,10 @@ public class QuizActivity extends AppCompatActivity {
         this.score_value = null;
     }
 
-    public void onQuizEnd() {
+    /**
+     * Called on quiz end
+     */
+    private void onQuizEnd() {
         score.setVisibility(View.INVISIBLE);
 
         context.setText(getString(R.string.quiz_welcome));
@@ -251,7 +272,12 @@ public class QuizActivity extends AppCompatActivity {
         this.queue = null;
     }
 
-    public void onQuizStart(String topic) {
+    /**
+     * Called on quiz start
+     *
+     * @param topic The chosen topic
+     */
+    private void onQuizStart(String topic) {
         queue        = new QuestionQueue(topic, questions.get(topic));
         score_value  = new AtomicInteger();
 
@@ -359,7 +385,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    public void pollQuestion() {
+    /**
+     * Called on {@link Question} change
+     */
+    private void pollQuestion() {
         if (!queue.isEmpty()) {
             Question question = queue.poll();
 
@@ -396,7 +425,10 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
-    public void skipQuestion() {
+    /**
+     * Called on {@link Question} skip
+     */
+    private void skipQuestion() {
         if (!queue.isEmpty()) {
             Question skipped  = queue.current();
 
@@ -411,6 +443,9 @@ public class QuizActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * Wrapper for submission {@link Marker}s
+     */
     private static final class SubmitListener implements View.OnClickListener {
 
         private final QuizActivity activity;
