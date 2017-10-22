@@ -12,6 +12,7 @@ import android.support.annotation.RequiresApi;
 import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.EditText;
 
 import java.util.HashSet;
@@ -68,11 +69,19 @@ public class FreeTextQuestion implements Question {
     public View buildInteractableView(Context context) {
         EditText free_text = new EditText(context);
 
+        free_text.setLayoutParams(new LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
         free_text.setPadding(12, 12, 12, 12);
         free_text.setTextSize(TypedValue.COMPLEX_UNIT_SP, 15);
         free_text.setHint   ("Enter your answer here");
         free_text.setTag    (keywords);
-        free_text.setBackgroundColor((Color.rgb(207, 207, 207)));
+
+        ShapeDrawable background = new ShapeDrawable(new RectShape());
+
+        background.getPaint().setColor(Color.BLACK);
+        background.getPaint().setStyle(Paint.Style.STROKE);
+        background.getPaint().setStrokeWidth(3);
+
+        free_text.setBackground(background);
 
         return free_text;
     }

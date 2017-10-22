@@ -2,7 +2,8 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/quiz_background">
 
     <TextView
         android:id="@+id/score"
@@ -42,6 +43,7 @@
         android:padding="12dp"
         android:text="@string/quiz_skip"
         android:textSize="12sp"
+        android:background="@drawable/quiz_button"
         android:visibility="invisible"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@+id/submit"
@@ -54,6 +56,7 @@
         android:padding="12dp"
         android:text="@string/quiz_submit"
         android:textSize="12sp"
+        android:background="@drawable/quiz_button"
         android:visibility="invisible"
         app:layout_constraintBottom_toTopOf="@+id/remaining"
         app:layout_constraintLeft_toRightOf="@+id/skip"
@@ -67,6 +70,7 @@
         android:padding="12dp"
         android:text="@string/quiz_next"
         android:textSize="12sp"
+        android:background="@drawable/quiz_button"
         android:visibility="invisible"
         app:layout_constraintLeft_toRightOf="@+id/submit"
         app:layout_constraintRight_toRightOf="parent"

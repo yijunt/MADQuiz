@@ -12,7 +12,10 @@ import android.widget.CheckBox;
 import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -68,7 +71,11 @@ public class MultipleChoiceQuestion implements Question {
         group.setPadding     (6, 6, 6, 6);
         group.setOrientation (LinearLayout.VERTICAL);
 
-        for (Map.Entry<String, Boolean> choice : getChoices().entrySet()) {
+        List<Map.Entry<String, Boolean>> choices = new ArrayList<>(getChoices().entrySet());
+
+        Collections.shuffle(choices);
+
+        for (Map.Entry<String, Boolean> choice : choices) {
             CheckBox box = new CheckBox(context);
 
             box.setPadding(12, 12, 12, 12);

@@ -112,18 +112,13 @@ public class QuizActivity extends AppCompatActivity {
                 workbook.close();
         }
 
-        this.topics = new LinearLayout(getApplicationContext());
+        this.topics = LinearLayout.class.cast(getLayoutInflater().inflate(R.layout.quiz_topic_layout, null));
 
         topics.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER_HORIZONTAL));
-        topics.setPadding     (6, 6, 6, 6);
-        topics.setGravity     (Gravity.CENTER);
-        topics.setOrientation (LinearLayout.VERTICAL);
 
         for (final String topic : questions.keySet()) {
-            Button button = new Button(getApplicationContext());
+            Button button = Button.class.cast(getLayoutInflater().inflate(R.layout.quiz_topic_button, null));
 
-            button.setLayoutParams   (new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER));
-            button.setPadding        (12, 12, 12, 12);
             button.setText           (topic);
             button.setOnClickListener(new View.OnClickListener() {
 
@@ -175,39 +170,22 @@ public class QuizActivity extends AppCompatActivity {
 
         this.remaining = getView(TextView.class, R.id.remaining);
 
-        this.actions = new LinearLayout(getApplicationContext());
+        this.actions = LinearLayout.class.cast(getLayoutInflater().inflate(R.layout.quiz_actions, null));
 
-        actions.setLayoutParams(new LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT, Gravity.CENTER));
-        actions.setPadding     (6, 6, 6, 6);
-        actions.setGravity     (Gravity.CENTER);
-        actions.setOrientation (LinearLayout.HORIZONTAL);
-
-        Button restart = new Button(getApplicationContext());
-
-        restart.setPadding        (12, 12, 12, 12);
-        restart.setText           (getString(R.string.quiz_restart));
-        restart.setOnClickListener(new View.OnClickListener() {
+        actions.getChildAt(0).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 onQuizStart(queue.getTopic());
             }
         });
-
-        Button end = new Button(getApplicationContext());
-
-        end.setPadding        (12, 12, 12, 12);
-        end.setText           (getString(R.string.quiz_end));
-        end.setOnClickListener(new View.OnClickListener() {
+        actions.getChildAt(1).setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View view) {
                 onQuizEnd();
             }
         });
-
-        actions.addView(restart);
-        actions.addView(end);
 
         context.setText(getString(R.string.quiz_welcome));
 
